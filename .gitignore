@@ -1,0 +1,8 @@
+node_modules/
+*.log
+*.orig
+*.bak
+*.rej
+*.tmp
+.DS_Store
+Thumbs.db

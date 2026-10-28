@@ -1,0 +1,57 @@
+{
+  "name": "dsh-auto-retry",
+  "version": "1.0.0",
+  "description": "Retry failed model requests in DeepSeek Harness: catches any request error and replays the step after a four-step backoff ladder (2s / 5s / 10s / 20s).",
+  "license": "MIT",
+  "type": "module",
+  "author": {
+    "name": "643048695",
+    "url": "https://github.com/643048695"
+  },
+  "homepage": "https://github.com/643048695/dsh-auto-retry#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/643048695/dsh-auto-retry.git"
+  },
+  "bugs": {
+    "url": "https://github.com/643048695/dsh-auto-retry/issues"
+  },
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "test",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "CHANGELOG.md",
+    "CHANGELOG.zh.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "dsh-plugin-bundle",
+    "retry",
+    "auto-retry",
+    "error-recovery",
+    "resilience"
+  ],
+  "dependencies": {
+    "@deepseek-ai/schemastery": "^3.18.2"
+  }
+}

@@ -1,0 +1,6 @@
+# dsh-auto-retry bundle patch: one host plugin row that listens on the
+# `agent/request-error` waterfall and replays the failed step after a
+# backoff wait, so a transient provider error does not end the turn.
+- insert:
+    - id: dsh-auto-retry
+      name: 'dsh-auto-retry'
